@@ -1,0 +1,141 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Roboto', sans-serif;
+  background: #282337;
+}
+
+.container {
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+  margin-top: 64px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  max-width: 480px;
+}
+
+h1 {
+  margin-bottom: 32px;
+  color: #fff;
+}
+
+.add_task {
+  width: 100%;
+  margin-bottom: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#add-task {
+  width: 85%;
+  padding: 7px 6px;
+  border: 1px solid #ccc;
+  border-radius: 3px 0 0 3px;
+  background-color: #000;
+  font-size: 16px;
+  color: #fff;
+  z-index: 100;
+}
+
+#add-task:focus {
+  outline: none;
+  border-radius: 3px 0 0 3px;
+  border: 1px solid #fbc407;
+}
+
+.submit-btn {
+  position: relative;
+  width: 15%;
+  padding: 8px 8px;
+  text-align: center;
+  background-color: #fbc407;
+  color: #000;
+  font-size: 16px;
+  font-weight: 700;
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+
+.submit-btn:hover {
+  background-color: #ac8402;
+}
+
+.submit-btn:active {
+  background-color: #fbc407;
+}
+
+table {
+  text-align: left;
+}
+
+table,
+th,
+td {
+  padding: 10px 6px;
+  border: 1px solid #ccc;
+  border-collapse: collapse;
+  color: #fff;
+  background-color: #000;
+}
+
+.delete,
+.repair,
+.delete-btn,
+.repair-btn {
+  text-align: center;
+}
+
+.delete-btn,
+.repair-btn {
+  cursor: pointer;
+}
+
+tr .content {
+  text-overflow: ellipsis;
+  word-break: break-word;
+}
+
+tr.finished .content {
+  text-decoration: line-through #fff solid 3px;
+}
+
+tr .behavior {
+  color: #a51c1c;
+  cursor: pointer;
+}
+
+tr.finished .behavior {
+  color: #1e7f19;
+  cursor: pointer;
+}
+
+.delete-btn:hover .delete-icon {
+  color: #a51c1c;
+}
+
+.repair-btn:hover .repair-icon {
+  color: #1e7f19;
+}
+
+@media screen and (max-width: 530px) {
+  .add_task {
+    flex-direction: column;
+  }
+
+  #add-task {
+    width: 100%;
+    border-radius: 3px
+  }
+
+  .submit-btn {
+    width: 100%;
+    margin-top: 20px;
+  }
+}
